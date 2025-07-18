@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8fafd;
+  color: #0f172a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  min-height: 100vh;
+}
+
+.checkout-container {
+  background: #fff;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.checkout-header h2 {
+  font-size: 1.5rem;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.checkout-form label {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.checkout-form input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.25rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #e5ebf1;
+  font-size: 1rem;
+  outline: none;
+}
+
+.row {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.column {
+  flex: 1;
+}
+
+.pay-btn {
+  width: 100%;
+  padding: 0.9rem;
+  background-color: #0f82f2;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 2rem;
+  transition: background 0.3s ease;
+}
+
+.pay-btn:hover {
+  background-color: #0266d6;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .checkout-container {
+    padding: 1rem;
+  }
+
+  .checkout-header h2 {
+    font-size: 1.3rem;
+  }
+
+  .pay-btn {
+    font-size: 1rem;
+  }
+}

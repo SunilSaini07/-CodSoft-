@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>E-Shop-sign-up</title>
+  <link rel="stylesheet" href="auth_register.css" />
+</head>
+<body>
+  <div class="register-container">
+    <button class="back-btn" onclick="history.back()">←</button>
+    <h2>Sign Up</h2>
+
+    <input type="text" id="fullName" placeholder="Full Name" required />
+    <input type="email" id="registerEmail" placeholder="Email" required />
+    <input type="password" id="registerPassword" placeholder="Password" required />
+    <input type="password" id="confirmPassword" placeholder="Confirm Password" required />
+
+    <button onclick="registerUser()" class="signup-btn">Sign Up</button>
+
+    <p class="login-link">Already have an account?<br />
+      <a href="auth.html">Log In</a>
+    </p>
+
+    <p id="statusText"></p>
+  </div>
+
+  <script type="module" src="auth_register.js"></script>
+</body>
+</html>

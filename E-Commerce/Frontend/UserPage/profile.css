@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.5;
+  padding: 20px;
+}
+
+.profile-container {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+
+.profile-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+/* User Info */
+#user-name {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-top: 10px;
+}
+#user-email {
+  text-align: center;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+
+.section {
+  margin-top: 30px;
+}
+.section h4 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  color: #000;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+}
+
+
+.section ul {
+  list-style: none;
+  padding: 0;
+}
+.section ul li {
+  background: #f4f4f4;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  transition: background 0.2s;
+}
+.section ul .order {
+  background: #cac6c6;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  transition: background 0.2s;
+}
+.section ul li:hover {
+  background: #eaeaea;
+  cursor: pointer;
+}
+
+.section ul a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Logout Button */
+#logout-btn {
+  display: block;
+  margin: 32px auto 80px auto; 
+  padding: 12px 32px;
+  background: #e53935;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(229,57,53,0.08);
+  transition: background 0.2s, transform 0.2s;
+}
+
+#logout-btn:hover,
+#logout-btn:focus {
+  background: #b71c1c;
+  transform: translateY(-2px) scale(1.03);
+  outline: none;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+  .profile-container {
+    padding: 15px;
+    border-radius: 12px;
+  }
+  #user-name {
+    font-size: 1.2rem;
+  }
+  .section h4 {
+    font-size: 1rem;
+  }
+  .section ul li {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+  #logout-btn {
+    width: 90%;
+    padding: 12px 0;
+    font-size: 1rem;
+    margin: 24px auto 70px auto;
+  }
+}
+
+/* Bottom navigation styles */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.05);
+  font-size: 1.4rem;
+  z-index: 9999;
+  transition: transform 0.3s;
+}
+
+.bottom-nav .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.bottom-nav svg {
+  width: 24px;
+  height: 24px;
+  fill: #333;
+}
+
+.cart-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}

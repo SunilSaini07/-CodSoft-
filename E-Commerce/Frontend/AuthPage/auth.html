@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Shop-sign-in</title>
+  <link rel="stylesheet" href="auth.css" />
+</head>
+<body>
+  <div class="auth-container">
+    <button class="close-btn">&times;</button>
+    <h2>Sign in</h2>
+
+    <input type="email" id="loginEmail" placeholder="Email" required />
+    <input type="password" id="loginPassword" placeholder="Password" required />
+
+    <a href="#" class="forgot">Forgot password?</a>
+
+    <button onclick="loginUser()" class="login-btn">Sign in</button>
+
+    <p class="signup-link">
+      Don't have an account? <a href="auth_register.html">Sign up</a>
+    </p>
+    <p id="statusText"></p>
+  </div>
+
+  <script type="module" src="auth.js"></script>
+</body>
+</html>

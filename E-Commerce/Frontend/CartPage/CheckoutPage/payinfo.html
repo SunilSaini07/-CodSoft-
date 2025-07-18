@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Shop-checkout</title>
+    <link rel="stylesheet" href="payinfo.css" />
+</head>
+<body>
+  <div class="checkout-container">
+    <div class="checkout-header">
+      <h2>Payment</h2>
+      <button class="close-btn">&times;</button>
+    </div>
+
+    <form class="checkout-form">
+      <label for="name">Name on card</label>
+      <input type="text" id="name" placeholder="Name as per Card" required />
+
+      <label for="card-number">Card number</label>
+      <input type="text" id="card-number" placeholder="1234 5678 9012 3456" required />
+
+      <div class="row">
+        <div class="column">
+          <label for="expiry">Expiry date</label>
+          <input type="text" id="expiry" placeholder="MM/YY" required />
+        </div>
+        <div class="column">
+          <label for="cvc">CVC</label>
+          <input type="text" id="cvc" placeholder="123" required />
+        </div>
+      </div>
+
+      <label for="address">Billing address</label>
+      <input type="text" id="address" placeholder="123 Main Street" required />
+
+
+      <button type="submit" class="pay-btn"><p>Pay <span id="total"></span></p></button>
+    </form>
+  </div>
+  
+  <script>
+  // close button functionality
+  document.querySelector('.close-btn').addEventListener('click', function () {
+    window.location.href = '../cart.html';
+  });
+
+  // Calculate total
+  function updateTotals() {
+    const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+    const subtotal = cart.reduce((sum, item) => sum + (item.price * (item.qty || 1)), 0);
+    document.querySelector('.pay-btn span#total').textContent = `$${subtotal}.00`;
+  }
+  updateTotals();
+</script>
+  <script slot="payinfo.js"></script>
+</body>
+</html>

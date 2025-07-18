@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Shop-cartpage</title>
+  <link rel="stylesheet" href="cart.css" />
+</head>
+
+<body>
+  <div class="cart-container">
+    <!-- Cart Header -->
+    <div class="cart-header">
+      <button class="back-btn" aria-label="Back" style="background:none;border:none;cursor:pointer;">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" width="28" height="28">
+          <g data-name="Layer 2" id="Layer_2">
+            <path
+              d="M10.1,23a1,1,0,0,0,0-1.41L5.5,17H29.05a1,1,0,0,0,0-2H5.53l4.57-4.57A1,1,0,0,0,8.68,9L2.32,15.37a.9.9,0,0,0,0,1.27L8.68,23A1,1,0,0,0,10.1,23Z" />
+          </g>
+        </svg>
+      </button>
+      <h1>Cart</h1>
+    </div>
+
+    <div id="cart-items"></div>
+
+    <div class="summary" style="display:none;">
+      <h2>Summary</h2>
+      <p>Subtotal: <span id="subtotal"></span></p>
+      <p>Shipping: <span>Free</span></p>
+      <p>Total: <span id="total"></span></p>
+    </div>
+
+    <button class="checkout-btn" style="display:none;">Proceed to Checkout</button>
+  </div>
+
+  <div id="simple-toast"></div>
+
+  <footer class="bottom-nav">
+    <span class="icon">
+      <!-- Home icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <path d="M30.854,16.548C30.523,17.43,29.703,18,28.764,18H28v11c0,0.552-0.448,1-1,1h-6v-7c0-2.757-2.243-5-5-5
+            s-5,2.243-5,5v7H5c-0.552,0-1-0.448-1-1V18H3.235c-0.939,0-1.759-0.569-2.09-1.451c-0.331-0.882-0.088-1.852,0.62-2.47L13.444,3.019
+            c1.434-1.357,3.679-1.357,5.112,0l11.707,11.086C30.941,14.696,31.185,15.666,30.854,16.548z" />
+      </svg>
+    </span>
+    <span class="icon">
+      <!-- Search icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path
+          d="M10,18c1.9,0,3.6-0.6,4.9-1.7l4.4,4.4c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3c0.4-0.4,0.4-1,0-1.4l-4.4-4.4 
+          c1-1.4,1.7-3,1.7-4.9c0-4.4-3.6-8-8-8s-8,3.6-8,8S5.6,18,10,18z M10,4c3.3,0,6,2.7,6,6s-2.7,6-6,6s-6-2.7-6-6S6.7,4,10,4z" />
+      </svg>
+    </span>
+    <span class="cart-btn">
+      <!-- Cart icon -->
+      <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+        <path d="M184,184H69.8L41.9,30.6A8,8,0,0,0,34.1,24H16" fill="none" stroke="#000" stroke-linecap="round"
+          stroke-linejoin="round" stroke-width="16" />
+        <circle cx="80" cy="204" fill="none" r="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+          stroke-width="16" />
+        <circle cx="184" cy="204" fill="none" r="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+          stroke-width="16" />
+        <path d="M62.5,144H188.1a15.9,15.9,0,0,0,15.7-13.1L216,64H48" fill="none" stroke="#000" stroke-linecap="round"
+          stroke-linejoin="round" stroke-width="16" />
+      </svg>
+    </span>
+    <span class="icon">
+      <!-- Profile icon -->
+      <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+        <rect fill="none" height="256" width="256" />
+        <circle cx="128" cy="96" fill="none" r="64" stroke="#000" stroke-miterlimit="10" stroke-width="16" />
+        <path d="M31,216a112,112,0,0,1,194,0" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+          stroke-width="16" />
+      </svg>
+    </span>
+  </footer>
+
+  <script type="module" src="cart.js"></script>
+  <script type="module">
+    import { auth } from "../firebase-config.js";
+    import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+
+    // Back button functionality
+    document.querySelector('.back-btn').addEventListener('click', function () {
+      window.location.href = '../HomePage/index.html';
+    });
+
+    // Cart button
+    document.querySelectorAll('.cart-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        window.location.href = '../CartPage/cart.html';
+      });
+    });
+
+    // Search button
+    document.querySelectorAll('.bottom-nav .icon').forEach(function (icon) {
+      const svg = icon.querySelector('svg');
+      if (svg && svg.getAttribute('viewBox') === '0 0 24 24') {
+        icon.addEventListener('click', function () {
+          window.location.href = '../SearchPage/searchpage.html';
+        });
+      }
+    });
+
+    // Home button
+    document.querySelectorAll('.bottom-nav .icon').forEach(function (icon) {
+      const svg = icon.querySelector('svg');
+      if (svg && svg.getAttribute('viewBox') === '0 0 32 32') {
+        icon.addEventListener('click', function () {
+          window.location.href = '../HomePage/index.html';
+        });
+      }
+    });
+
+    // Profile button 
+    document.querySelectorAll('.bottom-nav .icon').forEach(function (icon) {
+      const svg = icon.querySelector('svg');
+      if (svg && svg.getAttribute('viewBox') === '0 0 256 256') {
+        icon.addEventListener('click', function () {
+          onAuthStateChanged(auth, (user) => {
+            if (user) {
+              window.location.href = "../UserPage/profile.html";
+            } else {
+              window.location.href = "../AuthPage/auth.html";
+            }
+          });
+        });
+      }
+    });
+
+    // Checkout button functionality
+    const checkoutBtn = document.querySelector('.checkout-btn');
+    checkoutBtn.addEventListener('click', function () {
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          window.location.href = './CheckoutPage/payinfo.html';
+        } else {
+          window.location.href = '../AuthPage/auth.html';
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
