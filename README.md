@@ -27,8 +27,6 @@ This repository showcases the hands-on projects developed during my **Web Develo
 - ✅ Lightweight and fast-loading pages
 - ✅ Fully functional navigation and content sections
 
----<img width="1358" height="2248" alt="Untitled" src="https://github.com/user-attachments/assets/15d74148-80a5-40dd-a89b-1627ff10d81d" />
-
 
 ## 🧰 Technologies Used
 
