@@ -31,10 +31,10 @@ This repository showcases the hands-on projects developed during my **Web Develo
 
  **HTML5**    
  **CSS3**     
-**JavaScript**
-**Firebase Authentication**
-**Firestore Database**
-**Firebase Cloud**
+ **JavaScript**
+ **Firebase Authentication**
+ **Firestore Database**
+ **Firebase Cloud**
 
 ---
 
