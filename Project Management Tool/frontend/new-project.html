@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ProjectMaster/projets/new-project</title>
+  <link rel="stylesheet" href="css/new-project.css" />
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">ProjectMaster</div>
+    <nav class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="project.html">Projects</a>
+        <a href="team.html">Team</a>
+        <a href="reports.html">Reports</a>
+    </nav>
+    <div class="nav-actions">
+        <input type="text" placeholder="Search" class="search-box" />
+        <button class="bell-icon">🔔</button>
+        <img src="https://placehold.co/32x32" alt="User" class="user-avatar" />
+    </div>
+</header>
+
+<main class="form-container">
+    <h1>New Project</h1>
+    <form id="projectForm">
+        <label for="projectName">Project Name</label>
+        <input type="text" id="projectName" name="projectName" placeholder="Enter project name" required />
+        
+        <label for="description">Description</label>
+        <textarea id="description" name="description" placeholder="Enter project description" rows="4" required></textarea>
+        
+      <label for="deadline">Deadline</label>
+      <input type="date" id="deadline" name="deadline" required />
+      
+      <label for="team">Team Members</label>
+      <select id="team" name="team" multiple>
+      </select>
+      
+      <div class="form-buttons">
+          <button type="button" class="cancel-btn" onclick="window.history.back()">Cancel</button>
+          <button type="submit" class="create-btn">Create Project</button>
+        </div>
+    </form>
+</main>
+<script type="module" src="js/new-project.js"></script>
+</body>
+</html>

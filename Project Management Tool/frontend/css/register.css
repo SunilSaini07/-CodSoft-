@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #f6f9fb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.register-form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.register-form h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #111827;
+}
+
+.register-form input[type="text"],
+.register-form input[type="email"],
+.register-form input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  background: #e5edf1;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.register-form button {
+  width: 100%;
+  background-color: #03a9f4;
+  border: none;
+  color: white;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.register-form button:hover {
+  background-color: #0288d1;
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 14px;
+}
+
+.login-link a {
+  color: #3b82f6;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 500px) {
+  .register-form {
+    padding: 20px;
+  }
+
+  .register-form h2 {
+    font-size: 1.5rem;
+  }
+}

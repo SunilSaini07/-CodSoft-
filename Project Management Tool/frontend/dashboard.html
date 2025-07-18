@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://uicdn.toast.com/calendar/latest/toastui-calendar.min.css" />
+  <script defer src="https://uicdn.toast.com/calendar/latest/toastui-calendar.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ProjectMaster/dashboard</title>
+  <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+
+<body>
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <h2 class="logo">ProjectMaster</h2>
+      <p class="tagline">Manage your projects efficiently</p>
+      <nav>
+        <ul>
+          <li class="active">📊 Dashboard</li>
+          <a href="project.html" style="text-decoration: none;"><li>📁 Projects</li></a>
+          <a href="reports.html" style="text-decoration: none;"><li>📝 Reports</li></a>
+          <a href="team.html" style="text-decoration: none;"><li>👥 Team</li></a>
+          <a href="setting.html" style="text-decoration: none;"><li>⚙️ Settings</li></a>
+        </ul>
+      </nav>
+      <button id="logout" class="outline-btn">Logout</button>
+    </aside>
+
+    <main class="main-content">
+      <h1 id="welcome-message">Overview</h1>
+      <section class="projects-section">
+        <h2>Active Projects</h2>
+        <div id="active-projects-list">
+          <!-- Projects will be dynamically inserted here -->
+        </div>
+      </section>
+
+      <section class="calendar-summary">
+        <div class="calendar-container">
+          <div class="calendar-header">
+            <h2 class="calendar-title">Upcoming Deadlines</h2>
+            <div class="calendar-nav">
+              <button id="prev-btn" class="nav-btn">&lt;</button>
+              <button id="today-btn" class="nav-btn">Today</button>
+              <button id="next-btn" class="nav-btn">&gt;</button>
+            </div>
+            <span id="calendar-range" class="calendar-range-text"></span>
+          </div>
+          <div id="calendar"></div>
+        </div>
+
+        <div class="task-summary">
+          <h2>Task Summary</h2>
+          <p><strong>Tasks Completed</strong></p>
+          <h1 id="task-completion-percentage">0%</h1>
+          <p class="growth">This Month <span class="positive">+10%</span></p>
+          <div class="bars">
+            <div>
+              <div class="bar completed"></div>
+              <p id="completed-tasks-count">Completed (0)</p>
+            </div>
+            <div>
+              <div class="bar inprogress"></div>
+              <p id="inprogress-tasks-count">In Progress (0)</p>
+            </div>
+            <div>
+              <div class="bar notstarted"></div>
+              <p id="notstarted-tasks-count">Not Started (0)</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="js/dashboard.js"></script>
+</body>
+
+</html>

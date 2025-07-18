@@ -1,0 +1,237 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8fafc;
+  color: #111827;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav-links a {
+  margin: 0 12px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.search-box {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+}
+
+.bell-icon {
+  background: none;
+  border: none;
+  font-size: 20px;
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+
+.main-content {
+  padding: 32px;
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.new-project-btn {
+  background-color: #e5f0f9;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  color: #1e40af;
+  cursor: pointer;
+}
+
+.search-wrapper {
+  margin-bottom: 24px;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 600px;
+  padding: 10px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background-color: #f1f5f9;
+}
+
+.projects-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.projects-table th, .projects-table td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.projects-table th {
+  background-color: #f9fafb;
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.progress-bar {
+  background-color: #e5e7eb;
+  border-radius: 10px;
+  height: 8px;
+  width: 100%;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #0ea5e9;
+  border-radius: 10px;
+}
+
+.progress-text {
+  font-size: 14px;
+  color: #374151;
+  margin-left: 8px;
+}
+
+.team-avatars {
+  display: flex;
+}
+
+.team-avatars img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin-left: -10px;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .main-content {
+    padding: 16px;
+  }
+  .header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .projects-table th, .projects-table td {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 8px;
+    gap: 10px;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+  }
+  .nav-actions {
+    margin-top: 8px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .main-content {
+    padding: 10px;
+  }
+  .header-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .new-project-btn {
+    width: 100%;
+    margin-top: 8px;
+  }
+  .search-input {
+    max-width: 100%;
+    font-size: 15px;
+  }
+  .projects-table {
+    overflow-x: auto;
+  }
+  .projects-table table {
+    min-width: 600px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container, .main-content {
+    padding: 4px;
+  }
+  .navbar {
+    padding: 6px 2px;
+    font-size: 15px;
+  }
+  .logo {
+    font-size: 16px;
+  }
+  .projects-table th, .projects-table td {
+    padding: 6px;
+    font-size: 12px;
+  }
+  .progress-bar {
+    height: 6px;
+  }
+  .team-avatars img {
+    width: 24px;
+    height: 24px;
+  }
+  .new-project-btn {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ProjectMaster/team/add-member</title>
+  <link rel="stylesheet" href="css/add-member.css" />
+  <script type="module" defer src="js/add-member.js?v=1.1"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">ProjectMaster</div>
+    <nav>
+      <a href="dashboard.html" style="text-decoration: none;">Dashboard</a>
+      <a href="project.html" style="text-decoration: none;">Projects</a>
+      <a href="team.html" style="text-decoration: none;">Team</a>
+      <a href="reports.html" style="text-decoration: none;">Reports</a>
+    </nav>
+    <div class="nav-icons">
+      <input type="text" placeholder="Search" class="search-input">
+      <span class="bell-icon">🔔</span>
+      <img src="https://placehold.co/32x32" alt="User" class="avatar">
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Add Team Member</h1>
+    <form id="addMemberForm" class="form">
+      <label>
+        Email
+        <input type="email" name="email" placeholder="Enter registered user's email" required />
+      </label>
+
+      <label>
+        Assign to Project
+        <select name="project" required>
+          <option value="">Select project</option>
+        </select>
+      </label>
+
+      <div class="form-actions">
+        <button type="submit" class="add-btn">Add Member</button>
+        <button type="button" class="cancel-btn" onclick="window.history.back()">Cancel</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>

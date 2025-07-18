@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ProjectMaster/team</title>
+  <link rel="stylesheet" href="css/team.css" />
+  <script type="module" defer src="js/team.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">ProjectMaster</div>
+    <nav>
+      <a href="dashboard.html" style="text-decoration: none;">Dashboard</a>
+      <a href="project.html" style="text-decoration: none;">Projects</a>
+      <a href="team.html" style="text-decoration: none;">Team</a>
+      <a href="reports.html" style="text-decoration: none;">Reports</a>
+    </nav>
+    <div class="nav-icons">
+      <input type="text" placeholder="Search" class="search-input">
+      <span class="bell-icon">🔔</span>
+      <img src="https://placehold.co/32x32" alt="User" class="avatar">
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="team-header">
+      <h1>Team</h1>
+      <a href="add-member.html">
+          <button class="add-member-btn">+Add Team Member</button>
+      </a>
+    </div>
+
+    <input type="text" id="searchInput" class="search-bar" placeholder="Search team members" />
+
+    <div class="tabs">
+      <span class="tab active">All</span>
+      <span class="tab">Active</span>
+    </div>
+
+    <div id="team-grid" class="team-grid"></div>
+  </main>
+</body>
+</html>

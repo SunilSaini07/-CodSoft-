@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ProjectMaster/projects</title>
+  <link rel="stylesheet" href="css/projects.css" />
+  <script type="module" defer src="js/project.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">ProjectMaster</div>
+    <nav class="nav-links">
+      <a href="dashboard.html" style="text-decoration: none;">Dashboard</a>
+      <a href="project.html" style="text-decoration: none;">Projects</a>
+      <a href="team.html" style="text-decoration: none;">Team</a>
+      <a href="reports.html" style="text-decoration: none;">Reports</a>
+    </nav>
+    <div class="nav-actions">
+      <input type="text" placeholder="Search" class="search-box" />
+      <button class="bell-icon">🔔</button>
+      <img src="https://placehold.co/32x32" alt="User" class="user-avatar" />
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="header-row">
+      <h1>Projects</h1>
+      <a href="new-project.html">
+        <button class="new-project-btn">+ New Project</button>
+      </a>
+    </div>
+
+    <div class="search-wrapper">
+      <input type="text" placeholder="Search projects" class="search-input" />
+    </div>
+
+    <div class="projects-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Project Name</th>
+            <th>Progress</th>
+            <th>Deadline</th>
+            <th>Team Members</th>
+          </tr>
+        </thead>
+        <tbody id="project-list">
+        </tbody>
+      </table>
+    </div>
+  </main>
+</body>
+</html>

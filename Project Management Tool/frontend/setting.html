@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ProjectMaster/settings</title>
+  <link rel="stylesheet" href="css/settings.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">ProjectMaster</div>
+    <nav>
+      <a href="dashboard.html" style="text-decoration: none;">Dashboard</a>
+      <a href="project.html" style="text-decoration: none;">Projects</a>
+      <a href="team.html" style="text-decoration: none;">Team</a>
+      <a href="reports.html" style="text-decoration: none;">Reports</a>
+    </nav>
+    <div class="nav-icons">
+      <span class="bell-icon">🔔</span>
+      <img src="https://placehold.co/32x32" alt="User" class="avatar">
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Settings</h1>
+
+    <section class="section">
+      <h2>Account Information</h2>
+      <label>Name</label>
+      <span id="full-name">Loading...</span>
+
+      <label>Email</label>
+      <span id="email">Loading...</span><br><br>
+
+      <button class="outline-btn">Change Password</button>
+    </section>
+
+    <section class="section">
+      <h2>Notifications</h2>
+      <div class="toggle-row">
+        <div>
+          <h4>Email Notifications</h4>
+          <p>Receive email notifications for project updates, task assignments, and deadlines.</p>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="emailToggle">
+          <span class="slider round"></span>
+        </label>
+      </div>
+
+      <div class="toggle-row">
+        <div>
+          <h4>In-App Notifications</h4>
+          <p>Get in-app notifications for real-time updates and alerts within the application.</p>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="inAppToggle">
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Preferences</h2>
+      <label>Language</label>
+      <select>
+        <option>English</option>
+        <option>Spanish</option>
+        <option>French</option>
+      </select>
+
+      <label>Theme</label>
+      <select>
+        <option>Light</option>
+        <option>Dark</option>
+      </select>
+
+      <button id="save-settings-btn" class="primary-btn">Save Changes</button>
+   
+    </section>
+  </main>
+  <script type="module" src="js/settings.js"></script>
+</body>
+</html>

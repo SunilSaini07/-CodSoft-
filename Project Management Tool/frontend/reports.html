@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ProjectMaster/reports</title>
+  <link rel="stylesheet" href="css/reports.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script defer src="js/reports.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">ProjectMaster</div>
+    <nav class="nav-links">
+      <a href="dashboard.html" style="text-decoration: none;">Dashboard</a>
+      <a href="project.html" style="text-decoration: none;">Projects</a>
+      <a href="team.html" style="text-decoration: none;">Team</a>
+      <a href="reports.html" style="text-decoration: none;">Reports</a>
+    </nav>
+    <div class="nav-actions">
+      <input type="text" placeholder="Search" class="search-box" />
+      <button class="bell-icon">🔔</button>
+      <img src="https://placehold.co/32x32" alt="User" class="user-avatar" />
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Reports</h1>
+    <p class="subtitle">Analyze project performance and team productivity</p>
+
+    <section class="overview">
+      <div class="card">
+        <h3>Project Progress</h3>
+        <p class="big">75%</p>
+      </div>
+      <div class="card">
+        <h3>Upcoming Deadlines</h3>
+        <p class="big">3</p>
+      </div>
+      <div class="card">
+        <h3>Overall Status</h3>
+        <p class="big bold">On Track</p>
+      </div>
+    </section>
+
+    <section class="team-performance">
+      <div class="card">
+        <h3>Task Completion Rates</h3>
+        <canvas id="completionChart"></canvas>
+      </div>
+      <div class="card">
+        <h3>Workload Distribution</h3>
+        <canvas id="workloadChart"></canvas>
+      </div>
+    </section>
+
+    <section class="time-tracking">
+      <div class="card">
+        <h3>Time Tracking Trends</h3>
+        <canvas id="timeChart"></canvas>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
