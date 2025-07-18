@@ -1,4 +1,4 @@
-# 💼 About CodSoft 
+# 💼 About CodSoft
 
 This repository showcases the hands-on projects developed during my **Web Development Internship at CodSoft**. The program emphasized frontend fundamentals and real-world application development using core web technologies.
 
