@@ -11,6 +11,8 @@ This repository showcases the hands-on projects developed during my **Web Develo
 - Interactive elements powered by JavaScript for a smooth user experience.
 - 🔗 [Live Demo](https://sunilsaini07.github.io/CodSoft/E%20-%20Commerce/) / Currently Unavailable
 
+- 
+
 ### 🔹 2. Project Management Tool (ProjectMaster)
 - A simplified task-tracking dashboard focused on usability and visual hierarchy.
 - Features include task categorization and dynamic UI elements.
@@ -25,7 +27,8 @@ This repository showcases the hands-on projects developed during my **Web Develo
 - ✅ Lightweight and fast-loading pages
 - ✅ Fully functional navigation and content sections
 
----
+---<img width="1358" height="2248" alt="Untitled" src="https://github.com/user-attachments/assets/15d74148-80a5-40dd-a89b-1627ff10d81d" />
+
 
 ## 🧰 Technologies Used
 
