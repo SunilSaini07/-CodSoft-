@@ -10,8 +10,7 @@ This repository showcases the hands-on projects developed during my **Web Develo
 - A fully responsive online storefront created with semantic HTML and styled using modern CSS practices.
 - Interactive elements powered by JavaScript for a smooth user experience.
 - 🔗 [Live Demo](https://e-shop-website--project.vercel.app/)
-
-- 
+  
 
 ### 🔹 2. Project Management Tool (ProjectMaster)
 - A simplified task-tracking dashboard focused on usability and visual hierarchy.
