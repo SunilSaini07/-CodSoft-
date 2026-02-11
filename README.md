@@ -9,7 +9,7 @@ This repository showcases the hands-on projects developed during my **Web Develo
 ### 🔹 1. E-Commerce Website (E-Shop)
 - A fully responsive online storefront created with semantic HTML and styled using modern CSS practices.
 - Interactive elements powered by JavaScript for a smooth user experience.
-- 🔗 [Live Demo](https://e-shop-website--project.vercel.app/)) 
+- 🔗 [Live Demo](https://e-shop-website--project.vercel.app/)
 
 - 
 
